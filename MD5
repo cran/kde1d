@@ -1,14 +1,14 @@
-d6da660832f5b98bc594a240ec8d7a41 *DESCRIPTION
+6501e8dc94031655ea22d06141c37aaa *DESCRIPTION
 eaa36de47b6da81fc789850f5a7feb9a *LICENSE
 649069520d06ff6e92e2d9b4f18b8ab9 *NAMESPACE
-8ffe6048235f4a30937da97d47a77880 *NEWS.md
+bda33ba33572e9dc4f4788907d45747a *NEWS.md
 016104bead8e0545b42e8bc4856f0769 *R/RcppExports.R
 df8c44588a5e9b0a9a4ae66e4323d772 *R/kde1d-package.R
 006098d0a8fb32bb15de57c79f6c8762 *R/kde1d.R
 0f6b551aeabec2164fece2107975a044 *R/kde1d_methods.R
 a70b8859ab5c16588acac7b54bac1664 *README.md
 10b8afd48650ab90cc87f51d145f1971 *inst/include/dpik.hpp
-49e422062bc5fd656c6173ae43205a51 *inst/include/interpolation.hpp
+501156e7a5bed9cc0c06b7d0e9aa875a *inst/include/interpolation.hpp
 f6b29934d73275a3b3cf29ee5610aa7a *inst/include/lpdens.hpp
 85fea756cadcf652ca28cbd84b2a55af *inst/include/stats.hpp
 b73ae53cd5ae8b062a6e6b934cb8642f *inst/include/tools.hpp
@@ -21,5 +21,5 @@ dc448093c3d58875a43ddae505ce87be *man/kde1d.Rd
 23a42556d749f2cd25ddf988938f7d4a *src/RcppExports.cpp
 5c72bebea49be15a4bf9898c8e3e4c78 *src/wrappers.cpp
 5a8a34429369debc68ba5f551f603c47 *tests/testthat.R
-92e272eb41171ee181a3f2971054c856 *tests/testthat/Rplots.pdf
+4e093fc8422f4770ab3d006fed1c1199 *tests/testthat/Rplots.pdf
 011bce177cfc61d977bb3d74409ddf92 *tests/testthat/test_kde1d.R
