@@ -47,7 +47,7 @@ private:
                           const Eigen::VectorXd& vals,
                           const Eigen::VectorXd& grid);
 
-    size_t find_cell(double x0);
+    ptrdiff_t find_cell(const double& x0);
 
     // Utility functions for integration
     double int_on_grid(const double& upr,
@@ -90,18 +90,19 @@ void InterpolationGrid1d::normalize(int times)
     }
 }
 
-inline size_t InterpolationGrid1d::find_cell(double x0)
+inline ptrdiff_t InterpolationGrid1d::find_cell(const double& x0)
 {
-    size_t cell_index = 0;
-    size_t m = grid_points_.size();
-    for (size_t k = 1; k < m - 1; ++k) {
-        if (x0 >= grid_points_(k)) {
-            cell_index = k;
-        } else {
-            break;
-        }
+    ptrdiff_t low = 0, high = grid_points_.size() - 1;
+    ptrdiff_t mid;
+    while (low < high - 1) {
+        mid = low + (high - low) / 2;
+        if (x0 < grid_points_(mid))
+            high = mid;
+        else
+            low = mid;
     }
-    return cell_index;
+
+    return low;
 }
 
 //! Interpolation
@@ -109,12 +110,12 @@ inline size_t InterpolationGrid1d::find_cell(double x0)
 inline Eigen::VectorXd InterpolationGrid1d::interpolate(const Eigen::VectorXd& x)
 {
     Eigen::VectorXd tmpgrid(4), tmpvals(4);
-    size_t m = grid_points_.size();
+    ptrdiff_t m = grid_points_.size();
 
     auto interpolate_one = [&] (const double& xx) {
-        size_t i0, i3;
-        size_t i = find_cell(xx);
-        i0 = std::max(i - 1, static_cast<size_t>(0));
+        ptrdiff_t i0, i3;
+        ptrdiff_t i = find_cell(xx);
+        i0 = std::max(i - 1, static_cast<ptrdiff_t>(0));
         i3 = std::min(i + 2, m - 1);
         tmpgrid(0) = this->grid_points_(i0);
         tmpgrid(1) = this->grid_points_(i);
@@ -124,7 +125,7 @@ inline Eigen::VectorXd InterpolationGrid1d::interpolate(const Eigen::VectorXd& x
         tmpvals(1) = this->values_(i);
         tmpvals(2) = this->values_(i + 1);
         tmpvals(3) = this->values_(i3);
-        return std::max(this->interp_on_grid(xx, tmpvals, tmpgrid), 1e-12);
+        return std::fmax(this->interp_on_grid(xx, tmpvals, tmpgrid), 1e-12);
     };
 
     return tools::unaryExpr_or_nan(x, interpolate_one);
@@ -253,7 +254,7 @@ inline double InterpolationGrid1d::int_on_grid(const double& upr,
                                                const Eigen::VectorXd& vals,
                                                const Eigen::VectorXd& grid)
 {
-    size_t m = grid.size();
+    ptrdiff_t m = grid.size();
     Eigen::VectorXd tmpvals(4), tmpgrid(4), tmpa(4);
     double uprnew, newint;
 
@@ -261,18 +262,18 @@ inline double InterpolationGrid1d::int_on_grid(const double& upr,
 
     if (upr > grid(0)) {
         // go up the grid and integrate
-        for (size_t k = 0; k < m - 1; ++k) {
+        for (ptrdiff_t k = 0; k < m - 1; ++k) {
             // stop loop if fully integrated
             if (upr < grid(k))
                 break;
 
             // select length 4 subvectors and calculate spline coefficients
-            tmpvals(0) = vals(std::max(k - 1, static_cast<size_t>(0)));
+            tmpvals(0) = vals(std::max(k - 1, static_cast<ptrdiff_t>(0)));
             tmpvals(1) = vals(k);
             tmpvals(2) = vals(k + 1);
             tmpvals(3) = vals(std::min(k + 2, m - 1));
 
-            tmpgrid(0) = grid(std::max(k - 1, static_cast<size_t>(0)));
+            tmpgrid(0) = grid(std::max(k - 1, static_cast<ptrdiff_t>(0)));
             tmpgrid(1) = grid(k);
             tmpgrid(2) = grid(k + 1);
             tmpgrid(3) = grid(std::min(k + 2, m - 1));
