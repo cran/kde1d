@@ -1,7 +1,7 @@
-acbd94ebc4cd431da5756020d5b687d5 *DESCRIPTION
+04e7884a4799a89870a5b210474e6a6e *DESCRIPTION
 eaa36de47b6da81fc789850f5a7feb9a *LICENSE
 649069520d06ff6e92e2d9b4f18b8ab9 *NAMESPACE
-402528ad1616d695879e74f4b52c5b70 *NEWS.md
+c0c6f23845c86f3d6d82bc4962eb214d *NEWS.md
 016104bead8e0545b42e8bc4856f0769 *R/RcppExports.R
 df8c44588a5e9b0a9a4ae66e4323d772 *R/kde1d-package.R
 c8bcfbde14f1ced0107b7daf63f978e5 *R/kde1d.R
@@ -10,7 +10,7 @@ c8bcfbde14f1ced0107b7daf63f978e5 *R/kde1d.R
 3f33d2d6cf3de8845cbca78ea6af2fdc *README.md
 10b8afd48650ab90cc87f51d145f1971 *inst/include/dpik.hpp
 7ee98d2be75289979db4a0b5ccf68ae7 *inst/include/interpolation.hpp
-bdedaa71f48638ed3a1b1e21e7521766 *inst/include/lpdens.hpp
+4d1b74e1917b0d9d6fbcec58eccc68ad *inst/include/lpdens.hpp
 b190a8ef9b9d443aa45ffe43deaf6de7 *inst/include/stats.hpp
 b73ae53cd5ae8b062a6e6b934cb8642f *inst/include/tools.hpp
 73ab90ea050bcf8ef869d52ebc835130 *man/dkde1d.Rd
