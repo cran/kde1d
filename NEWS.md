@@ -1,3 +1,11 @@
+# kde1d 1.0.2
+
+BUG FIXES
+
+  * Fix potential for uninitialized memory detected by valgrind (likely a false 
+    positive).
+
+
 # kde1d 1.0.1
 
 DEPENDENCIES

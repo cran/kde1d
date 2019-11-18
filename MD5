@@ -1,7 +1,7 @@
-f3aa28909a114139429538842c0d8940 *DESCRIPTION
+db47120d23c8ea5ebd4d323ad2ac5dc3 *DESCRIPTION
 eaa36de47b6da81fc789850f5a7feb9a *LICENSE
 d7194650733e36d395476ede24e0984f *NAMESPACE
-02cdee251a5c4d69d3c66c3387271128 *NEWS.md
+cbda42ed8d69b27d17de87c461a491d6 *NEWS.md
 7318a5f43eee058ed2ffde21714d14fd *R/RcppExports.R
 6a049617630bbd0cd062440798a6dfb6 *R/jitter.R
 b3423db46daec230679997596bd75878 *R/kde1d-methods.R
@@ -13,9 +13,9 @@ a6c393352a7bc66f2dd85482d5ce9baa *inst/include/kde1d-wrappers.hpp
 5498813e18cc2ea6d641915f05f1c7e2 *inst/include/kde1d/dpik.hpp
 fc48c2978501b5cdc5a26528386037cf *inst/include/kde1d/interpolation.hpp
 862853a274e02d7e0a40a2c924b8350f *inst/include/kde1d/kde1d.hpp
-87e4956370ef17cd806bd9803347f1ae *inst/include/kde1d/kdefft.hpp
-c82daacc2a9f9ef861f3e1e67e89e36f *inst/include/kde1d/stats.hpp
-4d14e999113388d71fcc1df9710907bb *inst/include/kde1d/tools.hpp
+6f8ea6527d6a1b320c1b584f412ca6cd *inst/include/kde1d/kdefft.hpp
+e09da4d6eec354a2fe560fd092b5127f *inst/include/kde1d/stats.hpp
+5ce4107ba0e0405df84e569b33a44948 *inst/include/kde1d/tools.hpp
 0a6cb07eae20eb639224914eed425441 *man/dkde1d.Rd
 22cd720e4829986d89faac08c04eceef *man/equi_jitter.Rd
 8e7aa41597e7f4f074254b03d474c3c1 *man/kde1d-package.Rd
