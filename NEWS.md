@@ -1,9 +1,15 @@
+# kde1d 1.0.3
+
+BUG FIXES
+
+  * fix invisible output in `dkde1d()`.
+  
+
 # kde1d 1.0.2
 
 BUG FIXES
 
-  * Fix potential for uninitialized memory detected by valgrind (likely a false 
-    positive).
+  * Prevent false positive on valgrind.
 
 
 # kde1d 1.0.1

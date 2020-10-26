@@ -1,7 +1,7 @@
 Package: kde1d
 Type: Package
 Title: Univariate Kernel Density Estimation
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
         person("Thomas", "Nagler",, "mail@tnagler.com", role = c("aut", "cre")),
         person("Thibault", "Vatter",, "thibault.vatter@gmail.com", role = c("aut"))
@@ -17,15 +17,15 @@ Encoding: UTF-8
 LazyData: true
 LinkingTo: BH, Rcpp, RcppEigen
 Imports: graphics, Rcpp, randtoolbox, stats, utils
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.1
 Suggests: testthat
 URL: https://github.com/tnagler/kde1d
 BugReports: https://github.com/tnagler/kde1d/issues
 SystemRequirements: C++11
 NeedsCompilation: yes
-Packaged: 2019-11-18 10:07:44 UTC; n5
+Packaged: 2020-10-26 15:50:40 UTC; n5
 Author: Thomas Nagler [aut, cre],
   Thibault Vatter [aut]
 Maintainer: Thomas Nagler <mail@tnagler.com>
 Repository: CRAN
-Date/Publication: 2019-11-18 15:50:02 UTC
+Date/Publication: 2020-10-26 16:20:02 UTC
