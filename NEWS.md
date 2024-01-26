@@ -1,3 +1,9 @@
+# kde1d 1.0.7
+
+DEPENDS
+
+  * stop enforcing C++11.
+  
 # kde1d 1.0.5
 
 BUG FIXES
